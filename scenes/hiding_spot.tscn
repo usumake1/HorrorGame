@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpn1m8vqxw3rx"]
+
+[ext_resource type="Script" path="res://scripts/hiding_spot.gd" id="1_hiding"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hiding"]
+size = Vector3(2, 2.5, 2)
+
+[node name="HidingSpot" type="Area3D"]
+script = ExtResource("1_hiding")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+shape = SubResource("BoxShape3D_hiding")
+
+[node name="ClosetMesh" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+size = Vector3(2, 2.5, 2)
+material_override = null
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 1.5)
+pixel_size = 0.01
+text = "Press E to Hide"
+font_size = 32
+outline_size = 8
