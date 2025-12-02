@@ -37,8 +37,8 @@ func _ready():
 	await get_tree().process_frame
 	player = get_tree().get_first_node_in_group("player")
 
-	# Get waypoints from parent or scene
-	var waypoint_parent = get_parent().get_node_or_null("Waypoints")
+	# Get waypoints from child node
+	var waypoint_parent = get_node_or_null("Waypoints")
 	if waypoint_parent:
 		for child in waypoint_parent.get_children():
 			if child is Node3D:
