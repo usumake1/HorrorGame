@@ -55,6 +55,10 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
+	# DEBUG: Print status
+	if Engine.get_physics_frames() % 60 == 0:  # Print once per second
+		print("On floor: ", is_on_floor(), " | Position: ", global_position, " | Velocity: ", velocity)
+
 	# Handle sprint and stamina
 	is_sprinting = Input.is_action_pressed("sprint") and stamina > 0
 
@@ -68,6 +72,10 @@ func _physics_process(delta):
 	# Get input direction
 	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+
+	# DEBUG: Print input
+	if input_dir.length() > 0 and Engine.get_physics_frames() % 30 == 0:
+		print("Input: ", input_dir, " | Direction: ", direction)
 
 	# Apply movement
 	if direction:
