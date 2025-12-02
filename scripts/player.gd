@@ -14,7 +14,7 @@ extends CharacterBody3D
 # State
 var stamina = max_stamina
 var is_sprinting = false
-var flashlight_on = false
+var flashlight_on = true
 var is_hiding = false
 
 # Get the gravity from the project settings
@@ -30,7 +30,7 @@ func _ready():
 
 	# Initialize flashlight state
 	if flashlight:
-		flashlight.visible = false
+		flashlight.visible = true
 
 func _input(event):
 	# Mouse look
