@@ -58,57 +58,57 @@ use_collision = true
 size = Vector3(20, 1, 20)
 
 [node name="OuterWallNorth" type="CSGBox3D" parent="House"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -10)
 use_collision = true
-size = Vector3(20, 3, 0.5)
+size = Vector3(20, 4, 0.5)
 
 [node name="OuterWallSouth" type="CSGBox3D" parent="House"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 10)
 use_collision = true
-size = Vector3(20, 3, 0.5)
+size = Vector3(20, 4, 0.5)
 
 [node name="OuterWallEast" type="CSGBox3D" parent="House"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2, 0)
 use_collision = true
-size = Vector3(0.5, 3, 20)
+size = Vector3(0.5, 4, 20)
 
 [node name="OuterWallWest" type="CSGBox3D" parent="House"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 2, 0)
 use_collision = true
-size = Vector3(0.5, 3, 20)
+size = Vector3(0.5, 4, 20)
 
 [node name="InnerWall1" type="CSGBox3D" parent="House"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 use_collision = true
-size = Vector3(0.5, 3, 20)
+size = Vector3(0.5, 4, 20)
 
 [node name="InnerWall2" type="CSGBox3D" parent="House"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 use_collision = true
-size = Vector3(20, 3, 0.5)
+size = Vector3(20, 4, 0.5)
 
 [node name="DoorwayH1" type="CSGBox3D" parent="House"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 5)
 operation = 2
-size = Vector3(1, 2, 0.6)
+size = Vector3(1, 2.4, 0.6)
 
 [node name="DoorwayH2" type="CSGBox3D" parent="House"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, -5)
 operation = 2
-size = Vector3(1, 2, 0.6)
+size = Vector3(1, 2.4, 0.6)
 
 [node name="DoorwayV1" type="CSGBox3D" parent="House"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.2, 0)
 operation = 2
-size = Vector3(0.6, 2, 1)
+size = Vector3(0.6, 2.4, 1)
 
 [node name="DoorwayV2" type="CSGBox3D" parent="House"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.2, 0)
 operation = 2
-size = Vector3(0.6, 2, 1)
+size = Vector3(0.6, 2.4, 1)
 
 [node name="Ceiling" type="CSGBox3D" parent="House"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
 use_collision = true
 size = Vector3(20, 0.2, 20)
 
