@@ -1,12 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://cs1h5uwxdaujx"]
+[gd_scene load_steps=5 format=3 uid="uid://cs1h5uwxdaujx"]
 
 [ext_resource type="PackedScene" uid="uid://cq7qp1qwxjy8y" path="res://scenes/player.tscn" id="1_player"]
 [ext_resource type="PackedScene" uid="uid://bj8vqh5qm3p8k" path="res://scenes/enemy.tscn" id="2_enemy"]
 [ext_resource type="PackedScene" uid="uid://dpn1m8vqxw3rx" path="res://scenes/hiding_spot.tscn" id="3_hiding"]
 
+[sub_resource type="Environment" id="Environment_horror"]
+background_mode = 1
+background_color = Color(0.05, 0.05, 0.1, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.15, 0.15, 0.2, 1)
+ambient_light_energy = 0.5
+fog_enabled = true
+fog_light_color = Color(0.1, 0.1, 0.15, 1)
+fog_density = 0.01
+
 [node name="Main" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_horror")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, -0.75, 0.433013, 0, 10, 0)
