@@ -88,6 +88,12 @@ func _physics_process(delta):
 
 	move_and_slide()
 
+	# DEBUG: Check collisions
+	if get_slide_collision_count() > 0 and Engine.get_physics_frames() % 30 == 0:
+		for i in get_slide_collision_count():
+			var collision = get_slide_collision(i)
+			print("Collision with: ", collision.get_collider().name, " at ", collision.get_position())
+
 func toggle_flashlight():
 	flashlight_on = !flashlight_on
 	if flashlight:
